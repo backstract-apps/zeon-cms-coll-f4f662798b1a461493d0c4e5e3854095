@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zeon-cms-coll-f4f662798b1a461493d0c4e5e3854095-srv
+spec:
+  selector:
+    app: zeon-cms-coll-f4f662798b1a461493d0c4e5e3854095
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9014
+  type: LoadBalancer

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zeon-cms-coll-f4f662798b1a461493d0c4e5e3854095-depl
+  labels:
+    app: zeon-cms-coll-f4f662798b1a461493d0c4e5e3854095
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zeon-cms-coll-f4f662798b1a461493d0c4e5e3854095
+  template:
+    metadata:
+      labels:
+        app: zeon-cms-coll-f4f662798b1a461493d0c4e5e3854095
+    spec:
+      containers:
+        - name: zeon-cms-coll-f4f662798b1a461493d0c4e5e3854095
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:zeon-cms-coll-f4f662798b1a461493d0c4e5e3854095
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9014
